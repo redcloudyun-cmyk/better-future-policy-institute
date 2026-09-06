@@ -1,19 +1,22 @@
 # Multi-stage Dockerfile for Next.js App
+
 FROM node:20-alpine AS base
+RUN apk add --no-cache openssl libc6-compat
 
 # Step 1: Install dependencies
 FROM base AS deps
 WORKDIR /app
+
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Step 2: Build the app
+# Step 2: Build app
 FROM base AS builder
 WORKDIR /app
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Generate Prisma Client & Build Next.js app
 RUN npx prisma generate
 RUN npm run build
 

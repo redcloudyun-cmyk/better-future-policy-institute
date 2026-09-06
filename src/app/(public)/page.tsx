@@ -4,6 +4,7 @@ import ServicesSection from "@/components/home/ServicesSection";
 import ProcessSection from "@/components/home/ProcessSection";
 import ResearchAreasSection from "@/components/home/ResearchAreasSection";
 import ProjectsSection from "@/components/home/ProjectsSection";
+import NoticesSection from "@/components/home/NoticesSection";
 
 export const metadata = {
   title: "주식회사 더좋은미래정책연구원 - 더 나은 정책, 더 깊은 연구",
@@ -26,6 +27,7 @@ export default function HomePage() {
       <ProcessSection />
       <ResearchAreasSection />
       <ProjectsSection />
+      <NoticesSection />
     </div>
   );
 }

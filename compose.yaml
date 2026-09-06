@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bfpi_website
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=file:./dev.db
+      - SESSION_SECRET=bfpi_super_secret_jwt_key_2026_better_future_policy
+    volumes:
+      - ./prisma:/app/prisma
+      - ./public/uploads:/app/public/uploads

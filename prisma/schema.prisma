@@ -1,0 +1,142 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("ADMIN") // SUPER_ADMIN, ADMIN, EDITOR, VIEWER
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model ResearchCategory {
+  id           String            @id @default(uuid())
+  slug         String            @unique
+  title        String
+  englishTitle String?
+  icon         String?
+  description  String?
+  sortOrder    Int               @default(0)
+  isPublished  Boolean           @default(true)
+  projects     ResearchProject[]
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+}
+
+model ResearchProject {
+  id             String           @id @default(uuid())
+  slug           String           @unique
+  title          String
+  subtitle       String?
+  categoryId     String?
+  category       ResearchCategory? @relation(fields: [categoryId], references: [id])
+  clientName     String?          // 발주기관 (예: 중앙정부, 지자체, 공공기관)
+  periodStart    String?
+  periodEnd      String?
+  projectManager String?          // 책임연구원
+  summary        String?
+  body           String?
+  thumbnail      String?
+  reportFile     String?
+  tags           String?          // comma separated
+  status         String           @default("COMPLETED") // IN_PROGRESS, COMPLETED
+  isFeatured     Boolean          @default(false)
+  visibility     String           @default("PUBLIC") // PUBLIC, SUMMARY_ONLY, PRIVATE
+  publishedAt    DateTime         @default(now())
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+}
+
+model Researcher {
+  id          String   @id @default(uuid())
+  name        String
+  englishName String?
+  title       String   // 직책 (예: 선임연구위원, 원장)
+  department  String?  // 부서/연구실
+  photo       String?
+  specialty   String?  // 전문분야
+  biography   String?  // 소개
+  education   String?  // 학력
+  career      String?  // 경력
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Content {
+  id             String   @id @default(uuid())
+  slug           String   @unique
+  type           String   @default("POLICY_BRIEF") // POLICY_BRIEF, DATA_INSIGHT, ISSUE_REPORT, NOTICE, NEWS, PRESS, EVENT, DOWNLOAD
+  title          String
+  summary        String?
+  body           String?
+  thumbnail      String?
+  attachment     String?
+  author         String?  @default("더좋은미래정책연구원")
+  tags           String?
+  status         String   @default("PUBLISHED") // DRAFT, PUBLISHED
+  publishedAt    DateTime @default(now())
+  seoTitle       String?
+  seoDescription String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Inquiry {
+  id             String        @id @default(uuid())
+  clientName     String        // 기관명
+  contactPerson  String        // 담당자명
+  email          String
+  phone          String
+  category       String        // 연구분야
+  purpose        String        // 연구목적
+  expectedPeriod String?       // 예상기간
+  budgetRange    String?       // 예산범위
+  message        String?       // 문의내용
+  privacyAgreed  Boolean       @default(true)
+  status         String        @default("NEW") // NEW, REVIEWING, CONTACTED, PROPOSAL, CONTRACTED, CLOSED, REJECTED
+  assignedTo     String?       // 담당자
+  files          InquiryFile[]
+  logs           InquiryLog[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model InquiryFile {
+  id           String   @id @default(uuid())
+  inquiryId    String
+  inquiry      Inquiry  @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  originalName String
+  fileName     String
+  filePath     String
+  fileSize     Int
+  mimeType     String
+  createdAt    DateTime @default(now())
+}
+
+model InquiryLog {
+  id        String   @id @default(uuid())
+  inquiryId String
+  inquiry   Inquiry  @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  action    String
+  actorName String
+  note      String?
+  createdAt DateTime @default(now())
+}
+
+model SiteSetting {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String
+  description String?
+  updatedAt   DateTime @updatedAt
+}

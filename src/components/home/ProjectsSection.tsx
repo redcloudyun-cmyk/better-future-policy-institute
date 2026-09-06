@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 interface ProjectItem {
   id: string;
@@ -53,8 +53,8 @@ const mockupProjects: ProjectItem[] = [
 
 export default function ProjectsSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-12 md:py-14 bg-white border-b border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Title Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
@@ -74,8 +74,8 @@ export default function ProjectsSection() {
           </Link>
         </div>
 
-        {/* 4 Outcome Cards Grid (Matching Target Mockup Exactly) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 4 Outcome Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {mockupProjects.map((item) => (
             <Link
               key={item.id}
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
             >
               <div>
                 {/* Photo Thumbnail */}
-                <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                <div className="relative h-40 w-full overflow-hidden bg-slate-100">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                     style={{ backgroundImage: `url('${item.imgUrl}')` }}
@@ -93,29 +93,29 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6 space-y-3">
+                <div className="p-5 space-y-2.5">
                   {/* Badges */}
                   <div className="flex items-center gap-1.5">
-                    <span className="px-2.5 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-bold rounded-md">
+                    <span className="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-bold rounded-md">
                       {item.badge1}
                     </span>
-                    <span className="px-2.5 py-0.5 bg-sky-50 text-sky-800 text-[11px] font-bold rounded-md">
+                    <span className="px-2 py-0.5 bg-sky-50 text-sky-800 text-[11px] font-bold rounded-md">
                       {item.badge2}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base font-extrabold text-[#0B2D52] group-hover:text-teal-600 transition-colors leading-snug line-clamp-2">
+                  <h3 className="text-sm font-extrabold text-[#0B2D52] group-hover:text-teal-600 transition-colors leading-snug line-clamp-2">
                     {item.title}
                   </h3>
                 </div>
               </div>
 
               {/* Bottom Footer Date & Action Button */}
-              <div className="px-6 pb-6 pt-2 flex items-center justify-between text-xs font-semibold text-slate-400">
-                <span className="font-sans">{item.date}</span>
-                <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-[#0B2D52] group-hover:text-white flex items-center justify-center text-slate-700 transition-colors">
-                  <ArrowRight className="w-4 h-4" />
+              <div className="px-5 pb-5 pt-1 flex items-center justify-between text-xs font-semibold text-slate-400">
+                <span className="font-sans text-[11px]">{item.date}</span>
+                <div className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-[#0B2D52] group-hover:text-white flex items-center justify-center text-slate-700 transition-colors">
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </div>
               </div>
             </Link>

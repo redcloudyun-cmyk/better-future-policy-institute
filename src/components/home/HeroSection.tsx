@@ -6,22 +6,22 @@ import { ArrowRight, BarChart2, Users } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-gradient-to-b from-slate-100 via-sky-50/50 to-white">
-      {/* Background Graphic: Panoramic City & Sky with Giant Forward 3D Chevron Arrow */}
+    <section className="relative pt-24 pb-14 md:pt-28 md:pb-16 overflow-hidden bg-gradient-to-b from-slate-100 via-sky-50/40 to-white">
+      {/* Background Graphic: Panoramic City Skyline with Giant 3D Chevron Arrow */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* City Skyline Background Photo Graphic */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-multiply"
+          className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-multiply"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=80')",
+              "url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2000&q=80')",
           }}
         />
 
         {/* Gradient Overlay for Text Legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent" />
 
-        {/* Giant Blue Chevron "1" Arrow Graphic (Matching Mockup exactly) */}
+        {/* Giant Blue Chevron "1" Arrow Graphic (Matching Mockup) */}
         <svg
           viewBox="0 0 1000 600"
           className="absolute right-0 bottom-0 top-0 h-full w-auto max-w-none opacity-45 text-[#14B8A6]"
@@ -49,14 +49,14 @@ export default function HeroSection() {
           </defs>
         </svg>
 
-        {/* Top Right Vertical Quote & Metadata (Matching Mockup) */}
-        <div className="hidden xl:flex flex-col items-end absolute top-16 right-16 z-10 text-right space-y-4 pointer-events-none">
-          <div className="text-xl md:text-2xl font-bold font-serif text-[#0B2D52]/90 tracking-tight leading-snug">
+        {/* Top Right Quote & Metadata (Fixed position: top-28 to avoid header overlap) */}
+        <div className="hidden xl:flex flex-col items-end absolute top-28 right-12 lg:right-16 z-10 text-right space-y-3 pointer-events-none">
+          <div className="text-xl lg:text-2xl font-bold font-serif text-[#0B2D52] tracking-tight leading-snug">
             “오늘의 연구가 <br />
             <span className="pl-6 font-extrabold text-[#0D9488]">더 나은 내일을 만듭니다.”</span>
           </div>
 
-          <div className="text-[10px] font-sans font-bold tracking-[0.25em] text-slate-400 uppercase space-y-1 pt-2">
+          <div className="text-[10px] font-sans font-bold tracking-[0.2em] text-slate-400 uppercase space-y-1 pt-1">
             <div>PEOPLE</div>
             <div>SOCIETY</div>
             <div>BETTER POLICIES</div>
@@ -66,7 +66,7 @@ export default function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl space-y-6">
+        <div className="max-w-3xl space-y-5">
           {/* Sub-header Tagline */}
           <div className="text-xs font-bold font-sans text-slate-500 tracking-wider uppercase">
             A BETTER TOMORROW, THROUGH BETTER POLICIES
@@ -84,7 +84,7 @@ export default function HeroSection() {
           </p>
 
           {/* Action Buttons */}
-          <div className="pt-4 flex flex-wrap items-center gap-4">
+          <div className="pt-2 flex flex-wrap items-center gap-4">
             <Link
               href="/inquiry"
               className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-[#0B2D52] hover:bg-[#061B33] rounded-xl shadow-lg hover:shadow-xl transition-all group"
@@ -103,8 +103,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Bottom Floating Pill Bar Overlay (Matching Target Mockup Exactly) */}
-        <div className="mt-16 sm:mt-20 pt-6">
+        {/* Bottom Floating Pill Bar Overlay */}
+        <div className="mt-10 sm:mt-14 pt-2">
           <div className="inline-flex flex-col sm:flex-row items-stretch sm:items-center bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-full p-2.5 sm:px-6 shadow-xl border border-slate-200/90 gap-4 sm:gap-8">
             {/* Left Pill Item */}
             <div className="flex items-center gap-3 px-2 py-1">

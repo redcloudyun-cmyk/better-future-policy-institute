@@ -49,8 +49,8 @@ const areas = [
 
 export default function ResearchAreasSection() {
   return (
-    <section className="py-20 bg-[#F8FAFC] border-b border-slate-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-12 md:py-14 bg-[#F8FAFC] border-b border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Title Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
@@ -78,7 +78,7 @@ export default function ResearchAreasSection() {
               <Link
                 key={area.slug}
                 href={`/research-areas?category=${area.slug}`}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-slate-900 h-64 p-5 flex flex-col justify-between"
+                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-slate-900 h-60 p-5 flex flex-col justify-between"
               >
                 {/* Background Photo */}
                 <div
@@ -91,14 +91,14 @@ export default function ResearchAreasSection() {
 
                 {/* Top Icon */}
                 <div className="relative z-10">
-                  <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#0B2D52] transition-colors">
-                    <AreaIcon className="w-5 h-5" />
+                  <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#0B2D52] transition-colors">
+                    <AreaIcon className="w-4 h-4" />
                   </div>
                 </div>
 
                 {/* Bottom Content */}
                 <div className="relative z-10 space-y-1 text-white">
-                  <h3 className="text-xl font-extrabold text-white group-hover:text-teal-200 transition-colors">
+                  <h3 className="text-lg font-extrabold text-white group-hover:text-teal-200 transition-colors">
                     {area.title}
                   </h3>
                   <p className="text-[11px] text-slate-200 font-normal leading-tight">

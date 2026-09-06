@@ -37,8 +37,8 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 bg-white border-b border-slate-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-12 md:py-14 bg-white border-b border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Title Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
@@ -59,15 +59,15 @@ export default function ProcessSection() {
         </div>
 
         {/* Pipeline & Quote Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* 5 Steps Grid (Col 1 ~ 9) */}
           <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-5 gap-3 relative">
             {steps.map((item, index) => {
               const StepIcon = item.icon;
               return (
                 <div key={item.step} className="relative group">
-                  <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 h-full flex flex-col justify-between hover:bg-white hover:border-[#0B2D52] hover:shadow-md transition-all duration-300">
-                    <div className="space-y-3">
+                  <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 sm:p-5 h-full flex flex-col justify-between hover:bg-white hover:border-[#0B2D52] hover:shadow-md transition-all duration-300">
+                    <div className="space-y-2.5">
                       <div className="flex items-center justify-between">
                         <span className="w-7 h-7 rounded-full bg-[#0B2D52] text-white text-xs font-bold font-sans flex items-center justify-center">
                           {item.step}
@@ -78,7 +78,7 @@ export default function ProcessSection() {
                         <h3 className="text-base font-extrabold text-[#0B2D52] group-hover:text-teal-600 transition-colors">
                           {item.title}
                         </h3>
-                        <p className="text-[11px] text-slate-500 mt-1.5 leading-relaxed font-normal">
+                        <p className="text-[11px] text-slate-500 mt-1 leading-relaxed font-normal">
                           {item.desc}
                         </p>
                       </div>
@@ -95,15 +95,15 @@ export default function ProcessSection() {
             })}
           </div>
 
-          {/* Quote Card (Col 10 ~ 12 - Matching Target Mockup) */}
-          <div className="lg:col-span-3 bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between space-y-4">
-            <div className="space-y-3">
-              <Quote className="w-8 h-8 text-teal-500/40 transform -scale-x-100" />
-              <p className="text-base sm:text-lg font-bold text-[#0B2D52] font-serif leading-snug">
+          {/* Quote Card (Col 10 ~ 12) */}
+          <div className="lg:col-span-3 bg-slate-50 border border-slate-200/90 rounded-2xl p-5 flex flex-col justify-between space-y-3">
+            <div className="space-y-2">
+              <Quote className="w-7 h-7 text-teal-500/40 transform -scale-x-100" />
+              <p className="text-base font-bold text-[#0B2D52] font-serif leading-snug">
                 “좋은 질문이 더 나은 사회를 만듭니다.”
               </p>
             </div>
-            <div className="pt-4 border-t border-slate-200 text-[10px] font-bold text-slate-400 tracking-widest font-sans uppercase">
+            <div className="pt-3 border-t border-slate-200 text-[10px] font-bold text-slate-400 tracking-widest font-sans uppercase">
               RESEARCH <br />
               FOR A BETTER TOMORROW
             </div>

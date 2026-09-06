@@ -35,8 +35,8 @@ const mainServices = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-[#F8FAFC] border-b border-slate-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-12 md:py-14 bg-[#F8FAFC] border-b border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
@@ -57,20 +57,20 @@ export default function ServicesSection() {
         </div>
 
         {/* 4 Main White Service Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {mainServices.map((service) => {
             const IconComp = service.icon;
             return (
               <Link
                 key={service.id}
                 href={service.link}
-                className="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
+                className="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
               >
-                <div className="space-y-4">
-                  <div className="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-[#0B2D52] group-hover:bg-[#0B2D52] group-hover:text-teal-300 transition-colors">
-                    <IconComp className="w-7 h-7" />
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-[#0B2D52] group-hover:bg-[#0B2D52] group-hover:text-teal-300 transition-colors">
+                    <IconComp className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-extrabold text-[#0B2D52] group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-lg font-extrabold text-[#0B2D52] group-hover:text-teal-600 transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -78,7 +78,7 @@ export default function ServicesSection() {
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center gap-1 text-xs font-bold text-slate-700 group-hover:text-[#0B2D52] transition-colors">
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center gap-1 text-xs font-bold text-slate-700 group-hover:text-[#0B2D52] transition-colors">
                   <span>자세히 보기</span>
                   <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-1 transition-transform" />
                 </div>

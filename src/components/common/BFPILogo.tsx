@@ -97,14 +97,14 @@ export default function BFPILogo({
       <BFPISymbol className={symbolSizes[size]} />
 
       <div className="flex flex-col justify-center leading-tight">
-        <div className={`font-bold tracking-tight ${titleSizes[size]} ${isLight ? "text-white" : "text-[#0B2D52]"}`}>
-          {showCorpName && (
-            <span className={`font-medium mr-1.5 ${titleSizes[size]} ${isLight ? "text-slate-300" : "text-slate-500"}`}>
-              주식회사
-            </span>
-          )}
-          <span>더좋은미래정책연구원</span>
-        </div>
+        {showCorpName && (
+          <span className={`font-medium leading-tight ${subtitleSizes[size]} ${isLight ? "text-slate-400" : "text-slate-500"}`}>
+            주식회사
+          </span>
+        )}
+        <span className={`font-bold tracking-tight ${titleSizes[size]} ${isLight ? "text-white" : "text-[#0B2D52]"}`}>
+          더좋은미래정책연구원
+        </span>
 
         {showEnglish && (
           <span

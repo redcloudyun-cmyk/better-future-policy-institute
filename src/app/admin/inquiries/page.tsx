@@ -16,7 +16,7 @@ export default async function AdminInquiriesPage() {
     redirect("/admin/login");
   }
 
-  let inquiries = [];
+  let inquiries: any[] = [];
   try {
     inquiries = await prisma.inquiry.findMany({
       include: { files: true },
@@ -112,7 +112,7 @@ export default async function AdminInquiriesPage() {
                   <div className="pt-2">
                     <div className="text-xs font-bold text-slate-700 mb-2">첨부파일 ({inq.files.length}개):</div>
                     <div className="flex flex-wrap gap-2">
-                      {inq.files.map((file) => (
+                      {inq.files.map((file: any) => (
                         <a
                           key={file.id}
                           href={file.filePath}

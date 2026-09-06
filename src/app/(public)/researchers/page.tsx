@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function ResearchersPage() {
-  let researchers = [];
+  let researchers: any[] = [];
   try {
     researchers = await prisma.researcher.findMany({
       where: { isPublished: true },

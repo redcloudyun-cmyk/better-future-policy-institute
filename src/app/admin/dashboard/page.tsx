@@ -20,7 +20,7 @@ export default async function AdminDashboardPage() {
   let newInquiriesCount = 0;
   let totalProjects = 0;
   let totalResearchers = 0;
-  let recentInquiries = [];
+  let recentInquiries: any[] = [];
 
   try {
     totalInquiries = await prisma.inquiry.count();

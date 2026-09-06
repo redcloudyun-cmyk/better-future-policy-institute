@@ -21,7 +21,7 @@ const iconMap: Record<string, any> = {
 };
 
 export default async function ResearchAreasPage() {
-  let categories = [];
+  let categories: any[] = [];
   try {
     categories = await prisma.researchCategory.findMany({
       where: { isPublished: true },

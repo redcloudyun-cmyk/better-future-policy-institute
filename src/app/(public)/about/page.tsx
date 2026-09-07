@@ -7,7 +7,6 @@ import { useLanguage } from "@/lib/LanguageContext";
 
 export default function AboutPage() {
   const { lang } = useLanguage();
-
   const isEng = lang === "ENG";
 
   const researchers = [
@@ -56,9 +55,9 @@ export default function AboutPage() {
   return (
     <div className="pt-28 pb-20 bg-slate-50 min-h-screen">
       {/* 1. Hero Header */}
-      <div className="bg-gradient-to-b from-[#0B2D52] to-[#061B33] text-white py-16 md:py-20">
+      <div className="bg-gradient-to-b from-[#0B2D52] to-[#061B33] text-white py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             <span className="text-xs font-bold text-teal-400 font-sans tracking-widest uppercase bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
               ABOUT BFPI
             </span>
@@ -79,9 +78,9 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-12 space-y-12 sm:space-y-16">
         {/* 2. Representative Message Section */}
-        <section className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-xl space-y-8">
+        <section className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200/90 shadow-xl space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-6 gap-2">
             <div>
               <span className="text-xs font-bold text-teal-600 font-sans tracking-widest uppercase">
@@ -91,7 +90,7 @@ export default function AboutPage() {
                 {isEng ? "Representative's Message" : "대표 인사말"}
               </h2>
             </div>
-            <div className="text-right">
+            <div className="text-left sm:text-right">
               <span className="text-xs font-bold text-slate-400 font-sans">
                 Better Future Policy Institute
               </span>
@@ -100,7 +99,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left Column: Graphic / Profile Card */}
-            <div className="lg:col-span-4 bg-gradient-to-br from-[#0B2D52] to-[#14B8A6] rounded-2xl p-8 text-white space-y-6 shadow-lg flex flex-col justify-between min-h-[340px]">
+            <div className="lg:col-span-4 bg-gradient-to-br from-[#0B2D52] to-[#14B8A6] rounded-2xl p-6 sm:p-8 text-white space-y-6 shadow-lg flex flex-col justify-between min-h-[320px]">
               <div className="space-y-4">
                 <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-teal-300 text-2xl font-black font-sans">
                   BFPI
@@ -133,7 +132,7 @@ export default function AboutPage() {
             {/* Right Column: Greeting Body */}
             <div className="lg:col-span-8 space-y-6">
               <div className="p-4 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200/80">
-                <p className="text-lg sm:text-xl font-extrabold text-[#0B2D52] leading-snug">
+                <p className="text-base sm:text-xl font-extrabold text-[#0B2D52] leading-snug">
                   {isEng
                     ? "“Designing Policy on Evidence, Proposing the Future through Data.”"
                     : "“근거로 정책을 설계하고, 데이터로 미래를 제안합니다.”"}
@@ -183,7 +182,7 @@ export default function AboutPage() {
                   </>
                 )}
 
-                <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-600 font-medium">
+                <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600 font-medium">
                   <div>
                     <span className="font-bold text-[#0B2D52]">
                       {isEng ? "Better Future Policy Institute Co., Ltd." : "주식회사 더좋은미래정책연구원"}
@@ -199,7 +198,7 @@ export default function AboutPage() {
         </section>
 
         {/* 3. Institute Overview Section */}
-        <section className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-lg space-y-8">
+        <section className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200/90 shadow-lg space-y-8">
           <div className="space-y-2 border-b border-slate-100 pb-6">
             <span className="text-xs font-bold text-teal-600 font-sans tracking-widest uppercase">
               INSTITUTE OVERVIEW
@@ -214,21 +213,21 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Basic Info */}
-            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
+            <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
               <h3 className="text-base font-extrabold text-[#0B2D52] flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-teal-600" />
                 <span>{isEng ? "Key Information" : "기본 정보"}</span>
               </h3>
               <dl className="space-y-3 text-xs sm:text-sm text-slate-700">
-                <div className="flex justify-between py-1 border-b border-slate-200/60">
+                <div className="flex flex-col sm:flex-row sm:justify-between py-1 border-b border-slate-200/60 gap-0.5 sm:gap-0">
                   <dt className="text-slate-500 font-medium">{isEng ? "Organization Name" : "기관명"}</dt>
                   <dd className="font-bold text-[#0B2D52]">
                     {isEng ? "Better Future Policy Institute Co., Ltd." : "주식회사 더좋은미래정책연구원"}
                   </dd>
                 </div>
-                <div className="flex justify-between py-1 border-b border-slate-200/60">
+                <div className="flex flex-col sm:flex-row sm:justify-between py-1 border-b border-slate-200/60 gap-0.5 sm:gap-0">
                   <dt className="text-slate-500 font-medium">{isEng ? "English Name" : "영문명"}</dt>
                   <dd className="font-bold text-[#0B2D52] font-sans">Better Future Policy Institute</dd>
                 </div>
@@ -236,7 +235,7 @@ export default function AboutPage() {
                   <dt className="text-slate-500 font-medium">{isEng ? "Established" : "설립"}</dt>
                   <dd className="font-bold text-teal-700 font-sans">Since 2026</dd>
                 </div>
-                <div className="flex justify-between py-1">
+                <div className="flex flex-col sm:flex-row sm:justify-between py-1 gap-0.5 sm:gap-0">
                   <dt className="text-slate-500 font-medium">{isEng ? "Location" : "주소"}</dt>
                   <dd className="font-bold text-[#0B2D52]">
                     {isEng ? "Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do, Korea" : "경기도 수원시 팔달구 효원동"}
@@ -246,7 +245,7 @@ export default function AboutPage() {
             </div>
 
             {/* Core Research Areas */}
-            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
+            <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-4">
               <h3 className="text-base font-extrabold text-[#0B2D52] flex items-center gap-2">
                 <Award className="w-5 h-5 text-teal-600" />
                 <span>{isEng ? "Core Research Domains" : "핵심 연구영역"}</span>
@@ -270,7 +269,7 @@ export default function AboutPage() {
         </section>
 
         {/* 4. Research Team Summary Section */}
-        <section className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-lg space-y-8">
+        <section className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200/90 shadow-lg space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-100 pb-6 gap-4">
             <div>
               <span className="text-xs font-bold text-teal-600 font-sans tracking-widest uppercase">
@@ -322,9 +321,9 @@ export default function AboutPage() {
         </section>
 
         {/* 5. CI & Location Submenu Cards */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* CI Card */}
-          <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-md flex flex-col justify-between space-y-6 group hover:shadow-xl transition-shadow">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-md flex flex-col justify-between space-y-6 group hover:shadow-xl transition-shadow">
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-teal-600 font-sans tracking-widest uppercase">
@@ -353,7 +352,7 @@ export default function AboutPage() {
           </div>
 
           {/* Location Card */}
-          <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-md flex flex-col justify-between space-y-6 group hover:shadow-xl transition-shadow">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-md flex flex-col justify-between space-y-6 group hover:shadow-xl transition-shadow">
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-teal-600 font-sans tracking-widest uppercase">

@@ -14,11 +14,9 @@ import {
   Eye,
   FileCheck,
   ArrowRight,
+  ArrowDown,
   ShieldCheck,
-  Zap,
   Target,
-  Layers,
-  CheckCircle2,
 } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -420,13 +418,12 @@ export default function ResearchServicesPage() {
             <span className="text-xs font-bold text-slate-400 font-sans">WHAT WE DELIVER</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {servicesList.map((item) => {
-              const ServiceIcon = item.icon;
               return (
                 <div
                   key={item.num}
-                  className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 group"
+                  className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 group"
                 >
                   <div className="space-y-5">
                     {/* Header Number & Service Name */}
@@ -449,13 +446,13 @@ export default function ResearchServicesPage() {
                       {item.desc}
                     </p>
 
-                    {/* Key Activities */}
+                    {/* Key Activities Grid */}
                     <div className="space-y-2">
                       <span className="text-xs font-extrabold text-[#0B2D52] flex items-center gap-1.5">
                         <Target className="w-4 h-4 text-teal-600" />
                         <span>{isEng ? "Key Execution Activities" : "주요 수행내용"}</span>
                       </span>
-                      <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-700 font-medium">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs text-slate-700 font-medium">
                         {item.activities.map((act, idx) => (
                           <li
                             key={idx}
@@ -485,8 +482,8 @@ export default function ResearchServicesPage() {
           </div>
         </div>
 
-        {/* 6-Step Research Process Section */}
-        <section className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-lg space-y-10">
+        {/* 6-Step Research Process Section (Enhanced with Mobile Process Direction) */}
+        <section className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/90 shadow-lg space-y-10">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
             <span className="text-xs font-bold text-teal-600 font-sans tracking-widest uppercase">
               RESEARCH WORKFLOW
@@ -503,20 +500,21 @@ export default function ResearchServicesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
             {processSteps.map((p, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:border-[#0B2D52] hover:bg-white transition-all space-y-3 flex flex-col justify-between"
-              >
-                <div className="space-y-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#0B2D52] text-teal-300 font-extrabold text-sm flex items-center justify-center font-sans">
-                    {p.step}
+              <div key={idx} className="flex flex-col items-center space-y-2">
+                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:border-[#0B2D52] hover:bg-white transition-all space-y-3 flex flex-col justify-between w-full h-full">
+                  <div className="space-y-2">
+                    <div className="w-10 h-10 rounded-xl bg-[#0B2D52] text-teal-300 font-extrabold text-sm flex items-center justify-center font-sans shadow-sm">
+                      {p.step}
+                    </div>
+                    <h3 className="text-base font-bold text-[#0B2D52]">{p.title}</h3>
+                    <p className="text-[11px] text-slate-600 leading-relaxed font-normal">{p.desc}</p>
                   </div>
-                  <h3 className="text-base font-bold text-[#0B2D52]">{p.title}</h3>
-                  <p className="text-[11px] text-slate-600 leading-relaxed">{p.desc}</p>
                 </div>
+
+                {/* Mobile Step Down Arrow Indicator */}
                 {idx < processSteps.length - 1 && (
-                  <div className="hidden lg:block text-right text-slate-300 pt-1">
-                    <ArrowRight className="w-4 h-4 inline" />
+                  <div className="block lg:hidden text-teal-600 py-1">
+                    <ArrowDown className="w-4 h-4 animate-bounce" />
                   </div>
                 )}
               </div>
@@ -525,7 +523,7 @@ export default function ResearchServicesPage() {
         </section>
 
         {/* Service Differentiation Section */}
-        <section className="bg-gradient-to-br from-[#0B2D52] to-[#061B33] rounded-3xl p-8 sm:p-12 text-white shadow-xl space-y-10">
+        <section className="bg-gradient-to-br from-[#0B2D52] to-[#061B33] rounded-3xl p-6 sm:p-12 text-white shadow-xl space-y-10">
           <div className="text-center space-y-3 max-w-3xl mx-auto">
             <span className="text-xs font-bold text-teal-400 font-sans tracking-widest uppercase">
               WHY BFPI SERVICES

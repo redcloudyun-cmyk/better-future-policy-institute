@@ -17,29 +17,39 @@ export default function Footer() {
           {/* Logo */}
           <BFPILogo size="sm" showEnglish={false} showCorpName={true} />
 
-          {/* Links */}
-          <div className="flex items-center space-x-6 text-slate-700 font-bold">
-            <Link href="/terms" className="hover:text-[#0B2D52] transition-colors">
-              이용약관
+          {/* Sub-menu Quick Links */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-slate-700 font-bold">
+            <Link href="/about/greeting" className="hover:text-[#0B2D52] transition-colors">
+              원장 인사말
             </Link>
+            <Link href="/about/ci" className="hover:text-[#0B2D52] transition-colors">
+              CI 소개
+            </Link>
+            <Link href="/about/location" className="hover:text-[#0B2D52] transition-colors">
+              오시는 길
+            </Link>
+            <span className="text-slate-300">|</span>
             <Link href="/privacy" className="hover:text-[#0B2D52] transition-colors">
               개인정보처리방침
             </Link>
-            <Link href="/sitemap" className="hover:text-[#0B2D52] transition-colors">
-              사이트맵
+            <Link href="/terms" className="hover:text-[#0B2D52] transition-colors">
+              이용약관
             </Link>
           </div>
         </div>
 
         {/* Address Info & Right Social / Copyright */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 text-slate-500 font-normal">
-          <div>
+          <div className="space-y-1">
+            <p className="font-bold text-[#0B2D52]">
+              주식회사 더좋은미래정책연구원 &nbsp;·&nbsp; Better Future Policy Institute · Since 2026
+            </p>
             <p className="leading-relaxed">
-              (우) 04524 서울특별시 중구 세종대로 110, 미래빌딩 5층 &nbsp;|&nbsp; T. 02-1234-5678 &nbsp;|&nbsp; E. info@bfpi.re.kr
+              주소: 경기도 수원시 팔달구 효원동 &nbsp;|&nbsp; 대표전화: 추후 입력 &nbsp;|&nbsp; 이메일: 추후 입력
             </p>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 shrink-0">
             <div className="flex items-center space-x-3 text-slate-400">
               <a
                 href="https://youtube.com"
@@ -63,7 +73,7 @@ export default function Footer() {
 
             <span className="text-slate-300">|</span>
 
-            <span>© 2024 더좋은미래정책연구원. All rights reserved.</span>
+            <span>© 2026 더좋은미래정책연구원. All rights reserved.</span>
 
             <button
               onClick={scrollToTop}

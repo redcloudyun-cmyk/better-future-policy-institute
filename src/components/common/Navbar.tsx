@@ -6,7 +6,23 @@ import { usePathname } from "next/navigation";
 import BFPILogo from "./BFPILogo";
 import { Search, Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 
-const navItems = [
+interface NavItem {
+  label: string;
+  href: string;
+  subItems?: { label: string; href: string }[];
+}
+
+const navItems: NavItem[] = [
+  {
+    label: "연구원 소개",
+    href: "/about",
+    subItems: [
+      { label: "소개 홈", href: "/about" },
+      { label: "원장 인사말", href: "/about/greeting" },
+      { label: "CI 소개", href: "/about/ci" },
+      { label: "오시는 길", href: "/about/location" },
+    ],
+  },
   { label: "연구분야", href: "/research-areas" },
   { label: "연구용역", href: "/research-services" },
   { label: "성과사례", href: "/projects" },
@@ -56,20 +72,38 @@ export default function Navbar() {
             {navItems.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`text-[15px] font-bold transition-colors relative py-1 ${
-                    isActive
-                      ? "text-[#0B2D52]"
-                      : "text-slate-700 hover:text-[#0B2D52]"
-                  }`}
-                >
-                  {item.label}
+                <div key={item.label} className="relative group py-1">
+                  <Link
+                    href={item.href}
+                    className={`text-[15px] font-bold transition-colors flex items-center gap-1 ${
+                      isActive
+                        ? "text-[#0B2D52]"
+                        : "text-slate-700 hover:text-[#0B2D52]"
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                    {item.subItems && <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform" />}
+                  </Link>
+
                   {isActive && (
                     <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0B2D52] rounded-full" />
                   )}
-                </Link>
+
+                  {/* Dropdown Sub-menu */}
+                  {item.subItems && (
+                    <div className="absolute top-full left-0 mt-1 w-44 bg-white rounded-2xl shadow-xl border border-slate-100 p-2 hidden group-hover:block animate-in fade-in zoom-in-95 duration-150 z-50">
+                      {item.subItems.map((sub) => (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          className="block px-3.5 py-2 text-xs font-bold text-slate-700 hover:text-[#0B2D52] hover:bg-slate-50 rounded-xl transition-colors"
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </nav>
@@ -125,17 +159,32 @@ export default function Navbar() {
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden pt-20 bg-slate-900/40 backdrop-blur-sm">
-          <div className="bg-white w-full border-b border-slate-200 px-6 py-6 shadow-xl">
+          <div className="bg-white w-full max-h-[85vh] overflow-y-auto border-b border-slate-200 px-6 py-6 shadow-xl space-y-4">
             <div className="space-y-3">
               {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-base font-bold text-slate-800 hover:text-[#0B2D52] border-b border-slate-100"
-                >
-                  {item.label}
-                </Link>
+                <div key={item.label} className="space-y-1">
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2 text-base font-bold text-slate-800 hover:text-[#0B2D52] border-b border-slate-100"
+                  >
+                    {item.label}
+                  </Link>
+                  {item.subItems && (
+                    <div className="pl-4 space-y-1">
+                      {item.subItems.map((sub) => (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-1.5 text-xs font-semibold text-slate-600 hover:text-[#0B2D52]"
+                        >
+                          • {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
 

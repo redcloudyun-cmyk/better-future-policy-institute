@@ -187,7 +187,7 @@ export default function NoticeDetailPage({ params }: { params: { slug: string } 
               </div>
               <ul className="space-y-1.5 font-medium text-slate-700 pt-1">
                 <li>• 주주께서는 신분증을 지참하여 주시기 바랍니다.</li>
-                <li>• 문의: 경영지원팀 / 02-1234-5678 / info@bfpi.re.kr</li>
+                <li>• 문의: 경영지원팀 / 대표전화: 추후 입력 / 이메일: 추후 입력</li>
               </ul>
             </div>
           </div>

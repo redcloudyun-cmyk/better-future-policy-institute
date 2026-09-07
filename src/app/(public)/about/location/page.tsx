@@ -1,13 +1,14 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Building, Clock, Phone, Mail, Navigation, Calendar } from "lucide-react";
-
-export const metadata = {
-  title: "오시는 길 | 주식회사 더좋은미래정책연구원",
-  description: "경기도 수원시 팔달구 효원동 위치. 주식회사 더좋은미래정책연구원 방문 안내",
-};
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function LocationPage() {
+  const { lang } = useLanguage();
+  const isEng = lang === "ENG";
+
   return (
     <div className="pt-28 pb-20 bg-slate-50 min-h-screen">
       {/* Header */}
@@ -16,9 +17,13 @@ export default function LocationPage() {
           <span className="text-xs font-bold text-teal-400 font-sans tracking-widest uppercase bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
             LOCATION & CONTACT
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white">오시는 길</h1>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
+            {isEng ? "Location & Directions" : "오시는 길"}
+          </h1>
           <p className="text-sm text-slate-300 max-w-2xl mx-auto">
-            더좋은미래정책연구원으로 오시는 길을 안내합니다.
+            {isEng
+              ? "Guiding your path to Better Future Policy Institute."
+              : "더좋은미래정책연구원으로 오시는 길을 안내합니다."}
           </p>
         </div>
       </div>
@@ -29,7 +34,7 @@ export default function LocationPage() {
           className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#0B2D52] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>연구원 소개 목록으로 돌아가기</span>
+          <span>{isEng ? "Back to About Us" : "연구원 소개 목록으로 돌아가기"}</span>
         </Link>
 
         {/* Institution Info Card */}
@@ -39,10 +44,14 @@ export default function LocationPage() {
               BFPI HEADQUARTERS
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0B2D52]">
-              더좋은미래정책연구원으로 오시는 길을 안내합니다.
+              {isEng
+                ? "Location & Contact Information"
+                : "더좋은미래정책연구원으로 오시는 길을 안내합니다."}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-1">
-              더좋은미래정책연구원은 경기도 수원시 팔달구 효원동에 위치하고 있습니다. 연구 협의, 연구용역 상담 및 방문 미팅이 필요한 경우 사전에 일정을 협의해 주시기 바랍니다.
+              {isEng
+                ? "Better Future Policy Institute is located in Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do. If you require research consultation or visiting meetings, please coordinate schedule in advance."
+                : "더좋은미래정책연구원은 경기도 수원시 팔달구 효원동에 위치하고 있습니다. 연구 협의, 연구용역 상담 및 방문 미팅이 필요한 경우 사전에 일정을 협의해 주시기 바랍니다."}
             </p>
           </div>
 
@@ -51,53 +60,61 @@ export default function LocationPage() {
             <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
               <div className="flex items-center gap-2 text-teal-600 font-bold">
                 <Building className="w-4 h-4" />
-                <span>기관명</span>
+                <span>{isEng ? "Organization" : "기관명"}</span>
               </div>
-              <p className="font-extrabold text-[#0B2D52]">주식회사 더좋은미래정책연구원</p>
+              <p className="font-extrabold text-[#0B2D52]">
+                {isEng ? "Better Future Policy Institute Co., Ltd." : "주식회사 더좋은미래정책연구원"}
+              </p>
               <p className="text-[11px] text-slate-400 font-sans">Better Future Policy Institute</p>
             </div>
 
             <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
               <div className="flex items-center gap-2 text-teal-600 font-bold">
                 <MapPin className="w-4 h-4" />
-                <span>주소</span>
+                <span>{isEng ? "Address" : "주소"}</span>
               </div>
-              <p className="font-extrabold text-[#0B2D52]">경기도 수원시 팔달구 효원동</p>
-              <p className="text-[11px] text-slate-400 font-sans">Suwon-si, Gyeonggi-do</p>
+              <p className="font-extrabold text-[#0B2D52]">
+                {isEng ? "Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do" : "경기도 수원시 팔달구 효원동"}
+              </p>
+              <p className="text-[11px] text-slate-400 font-sans">Suwon-si, Gyeonggi-do, Korea</p>
             </div>
 
             <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
               <div className="flex items-center gap-2 text-teal-600 font-bold">
                 <Calendar className="w-4 h-4" />
-                <span>설립 및 운영시간</span>
+                <span>{isEng ? "Est. & Hours" : "설립 및 운영시간"}</span>
               </div>
               <p className="font-bold text-[#0B2D52]">Since 2026</p>
-              <p className="text-[11px] text-slate-500 font-medium">평일 09:00 ~ 18:00</p>
+              <p className="text-[11px] text-slate-500 font-medium">
+                {isEng ? "Weekdays 09:00 - 18:00" : "평일 09:00 ~ 18:00"}
+              </p>
             </div>
 
             <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2 sm:col-span-2 md:col-span-3">
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-2 text-slate-700">
                   <Phone className="w-4 h-4 text-teal-600" />
-                  <span className="font-bold">대표전화:</span>
-                  <span className="text-slate-500 font-medium">추후 입력</span>
+                  <span className="font-bold">{isEng ? "Tel:" : "대표전화:"}</span>
+                  <span className="text-slate-500 font-medium">{isEng ? "To be updated" : "추후 입력"}</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <Mail className="w-4 h-4 text-teal-600" />
-                  <span className="font-bold">공식 이메일:</span>
-                  <span className="text-slate-500 font-medium">추후 입력</span>
+                  <span className="font-bold">{isEng ? "Email:" : "공식 이메일:"}</span>
+                  <span className="text-slate-500 font-medium">{isEng ? "To be updated" : "추후 입력"}</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Map UI Placeholder Card (Matching Section 5 Specs Exactly) */}
+        {/* Map UI Placeholder Card */}
         <div className="bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-xl">
           <div className="p-6 border-b border-slate-100 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Navigation className="w-5 h-5 text-teal-600" />
-              <h3 className="text-lg font-extrabold text-[#0B2D52]">위치 지도 (MAP LOCATION)</h3>
+              <h3 className="text-lg font-extrabold text-[#0B2D52]">
+                {isEng ? "Map Location" : "위치 지도 (MAP LOCATION)"}
+              </h3>
             </div>
             <span className="text-xs font-bold text-slate-400 font-sans">DEMO MAP PLACEHOLDER</span>
           </div>
@@ -117,8 +134,12 @@ export default function LocationPage() {
               </div>
 
               <div className="space-y-1 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-slate-200 max-w-sm mx-auto">
-                <h4 className="text-lg font-black text-[#0B2D52]">더좋은미래정책연구원</h4>
-                <p className="text-xs font-extrabold text-teal-700">경기도 수원시 팔달구 효원동</p>
+                <h4 className="text-lg font-black text-[#0B2D52]">
+                  {isEng ? "Better Future Policy Institute" : "더좋은미래정책연구원"}
+                </h4>
+                <p className="text-xs font-extrabold text-teal-700">
+                  {isEng ? "Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do, Korea" : "경기도 수원시 팔달구 효원동"}
+                </p>
                 <p className="text-[11px] text-slate-500 font-sans">Better Future Policy Institute · Since 2026</p>
               </div>
             </div>
@@ -126,7 +147,9 @@ export default function LocationPage() {
 
           {/* Map Footer Notation */}
           <div className="p-4 bg-slate-50 text-center text-xs text-slate-500 border-t border-slate-100 font-medium">
-            경기도 수원시 팔달구 효원동 &nbsp;·&nbsp; Better Future Policy Institute · Since 2026
+            {isEng
+              ? "Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do, Korea · Better Future Policy Institute · Since 2026"
+              : "경기도 수원시 팔달구 효원동 · Better Future Policy Institute · Since 2026"}
           </div>
         </div>
       </div>

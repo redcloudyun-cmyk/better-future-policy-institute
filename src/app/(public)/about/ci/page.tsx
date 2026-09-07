@@ -1,15 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { BFPISymbol } from "@/components/common/BFPILogo";
 import BFPILogo from "@/components/common/BFPILogo";
-import { ArrowLeft, ShieldCheck, BarChart2, Globe2, Sparkles, FileText, CheckCircle2 } from "lucide-react";
-
-export const metadata = {
-  title: "CI 소개 | 주식회사 더좋은미래정책연구원",
-  description: "연구와 정책으로 더 좋은 미래를 향합니다. 주식회사 더좋은미래정책연구원 Corporate Identity (CI) 소개",
-};
+import { ArrowLeft } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function CIPage() {
+  const { lang } = useLanguage();
+  const isEng = lang === "ENG";
+
   return (
     <div className="pt-28 pb-20 bg-slate-50 min-h-screen">
       {/* Header */}
@@ -18,9 +19,13 @@ export default function CIPage() {
           <span className="text-xs font-bold text-teal-400 font-sans tracking-widest uppercase bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
             CORPORATE IDENTITY
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white">CI 소개</h1>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
+            {isEng ? "Corporate Identity (CI)" : "CI 소개"}
+          </h1>
           <p className="text-sm text-slate-300 max-w-2xl mx-auto">
-            연구와 정책으로 더 좋은 미래를 향하는 더좋은미래정책연구원의 시각적 정체성입니다.
+            {isEng
+              ? "The visual brand identity of Better Future Policy Institute heading towards a better future through research and policy."
+              : "연구와 정책으로 더 좋은 미래를 향하는 더좋은미래정책연구원의 시각적 정체성입니다."}
           </p>
         </div>
       </div>
@@ -31,7 +36,7 @@ export default function CIPage() {
           className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 hover:text-[#0B2D52] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>연구원 소개 목록으로 돌아가기</span>
+          <span>{isEng ? "Back to About Us" : "연구원 소개 목록으로 돌아가기"}</span>
         </Link>
 
         {/* Main Overview Card */}
@@ -41,47 +46,65 @@ export default function CIPage() {
               BFPI BRAND IDENTITY
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0B2D52]">
-              연구와 정책으로 더 좋은 미래를 향합니다.
+              {isEng
+                ? "Heading towards a better future through research and policy."
+                : "연구와 정책으로 더 좋은 미래를 향합니다."}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-2">
-              더좋은미래정책연구원의 CI는 연구원의 핵심 가치인 신뢰, 전문성, 미래지향성, 공공성을 시각적으로 표현합니다.
+              {isEng
+                ? "The CI of Better Future Policy Institute visually expresses our core values: Trust, Expertise, Future-Orientation, and Public Value."
+                : "더좋은미래정책연구원의 CI는 연구원의 핵심 가치인 신뢰, 전문성, 미래지향성, 공공성을 시각적으로 표현합니다."}
             </p>
           </div>
 
           <div className="text-xs sm:text-sm text-slate-700 leading-relaxed space-y-4 font-normal">
             <p>
-              심볼은 더 나은 방향으로 나아가는 흐름과 성장, 그리고 사회와 정책의 긍정적 변화를 상징합니다. 안정감 있는 형태는 정책연구기관으로서의 신뢰를, 미래를 향해 확장되는 이미지는 데이터와 연구를 기반으로 지속 가능한 해법을 제시하는 연구원의 비전을 의미합니다.
+              {isEng
+                ? "The symbol represents an ascending path and continuous growth towards positive changes in society and policy. The solid structure symbolizes trust as a policy research organization, while the forward-expanding form reflects our vision of delivering sustainable solutions through data and research."
+                : "심볼은 더 나은 방향으로 나아가는 흐름과 성장, 그리고 사회와 정책의 긍정적 변화를 상징합니다. 안정감 있는 형태는 정책연구기관으로서의 신뢰를, 미래를 향해 확장되는 이미지는 데이터와 연구를 기반으로 지속 가능한 해법을 제시하는 연구원의 비전을 의미합니다."}
             </p>
             <p>
-              로고타입은 명확하고 정제된 인상을 통해 연구기관의 전문성과 공공적 가치를 전달하며, 네이비와 틸을 중심으로 한 컬러 시스템은 신뢰와 혁신의 균형을 나타냅니다.
+              {isEng
+                ? "The refined logotype communicates professional authority and public value, while the color palette centered around Deep Navy and Teal Blue creates a harmonious balance of trust and innovation."
+                : "로고타입은 명확하고 정제된 인상을 통해 연구기관의 전문성과 공공적 가치를 전달하며, 네이비와 틸을 중심으로 한 컬러 시스템은 신뢰와 혁신의 균형을 나타냅니다."}
             </p>
           </div>
 
           {/* 5 Key Keywords Grid */}
           <div className="pt-4 space-y-3">
             <h3 className="text-xs font-bold text-[#0B2D52] uppercase tracking-wider font-sans">
-              CI 핵심 키워드 (KEY VALUES)
+              CI CORE KEYWORDS (KEY VALUES)
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-center">
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <div className="text-xs font-black text-[#0B2D52] font-sans">TRUST</div>
-                <div className="text-[11px] text-slate-500 font-medium">신뢰 연구 & 책임 제안</div>
+                <div className="text-[11px] text-slate-500 font-medium">
+                  {isEng ? "Trustworthy Research" : "신뢰 연구 & 책임 제안"}
+                </div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <div className="text-xs font-black text-[#0B2D52] font-sans">INSIGHT</div>
-                <div className="text-[11px] text-slate-500 font-medium">데이터 기반 깊은 분석</div>
+                <div className="text-[11px] text-slate-500 font-medium">
+                  {isEng ? "Data-Driven Analysis" : "데이터 기반 깊은 분석"}
+                </div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <div className="text-xs font-black text-[#0B2D52] font-sans">EVIDENCE</div>
-                <div className="text-[11px] text-slate-500 font-medium">객관적 근거 바탕 연구</div>
+                <div className="text-[11px] text-slate-500 font-medium">
+                  {isEng ? "Evidence-Based Studies" : "객관적 근거 바탕 연구"}
+                </div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <div className="text-xs font-black text-[#0B2D52] font-sans">FUTURE</div>
-                <div className="text-[11px] text-slate-500 font-medium">미래지향적 사회 선도</div>
+                <div className="text-[11px] text-slate-500 font-medium">
+                  {isEng ? "Future-Oriented Vision" : "미래지향적 사회 선도"}
+                </div>
               </div>
               <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <div className="text-xs font-black text-[#0B2D52] font-sans">POLICY</div>
-                <div className="text-[11px] text-slate-500 font-medium">정책 연계 및 실질 변화</div>
+                <div className="text-[11px] text-slate-500 font-medium">
+                  {isEng ? "Real Policy Impact" : "정책 연계 및 실질 변화"}
+                </div>
               </div>
             </div>
           </div>
@@ -94,7 +117,9 @@ export default function CIPage() {
               <span className="text-[10px] font-bold text-teal-600 font-sans tracking-widest uppercase">
                 OFFICIAL CI BRAND SPECIFICATION
               </span>
-              <h3 className="text-xl font-black text-[#0B2D52]">CI 브랜드 규정 및 로고 가이드라인</h3>
+              <h3 className="text-xl font-black text-[#0B2D52]">
+                {isEng ? "CI Brand Specification & Logo Guidelines" : "CI 브랜드 규정 및 로고 가이드라인"}
+              </h3>
             </div>
             <span className="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full font-sans">
               LOGO PROPOSAL
@@ -105,12 +130,14 @@ export default function CIPage() {
             {/* eslint-disable-next-html-loader */}
             <img
               src="/images/ci-logo-proposal.png"
-              alt="더좋은미래정책연구원 CI 로고 가이드라인 (LOGO PROPOSAL)"
+              alt="Better Future Policy Institute CI Logo Guidelines"
               className="w-full h-auto object-contain block max-h-[600px] mx-auto"
             />
           </div>
           <p className="text-xs text-slate-500 text-center font-medium">
-            * 더좋은미래정책연구원의 브랜드 심볼(Forward Future Path), 한글/영문 로고타입 및 핵심 컬러 시스템 가이드
+            {isEng
+              ? "* Official CI Symbol (Forward Future Path), Logotypes, and Color System Specifications"
+              : "* 더좋은미래정책연구원의 브랜드 심볼(Forward Future Path), 한글/영문 로고타입 및 핵심 컬러 시스템 가이드"}
           </p>
         </div>
 
@@ -134,13 +161,10 @@ export default function CIPage() {
               </div>
               <div className="md:col-span-7 space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
                 <p className="font-bold text-[#0B2D52] text-base">
-                  미래로 향하는 길 / 상승 / 정책의 방향성
+                  {isEng ? "Forward Path to the Future / Growth / Policy Direction" : "미래로 향하는 길 / 상승 / 정책의 방향성"}
                 </p>
                 <p>
-                  두 개의 면이 앞으로 열리며 만들어지는 길은 더 나은 미래를 향한 정책의 방향과 지속적인 발전을 상징합니다. 사람과 사회, 오늘과 내일을 잇는 더 좋은 길을 만들어갑니다.
-                </p>
-                <p className="text-slate-400 font-sans text-xs pt-2 border-t border-slate-100">
-                  An open path created by two planes symbolizes a better future, policy direction, and continuous progress.
+                  An open path created by two planes symbolizes a better future, policy direction, and continuous progress. We connect people, society, today and tomorrow through better policies.
                 </p>
               </div>
             </div>
@@ -219,7 +243,9 @@ export default function CIPage() {
                 <div className="space-y-1">
                   <h4 className="text-base font-extrabold text-[#0B2D52]">Deep Navy</h4>
                   <p className="text-xs text-slate-500 font-sans font-bold">Trust · Insight · Professionalism</p>
-                  <p className="text-xs text-slate-600 pt-1">신뢰, 전문성, 공공성, 정책연구기관의 공신력</p>
+                  <p className="text-xs text-slate-600 pt-1">
+                    {isEng ? "Trust, Expertise, Public Value" : "신뢰, 전문성, 공공성, 정책연구기관의 공신력"}
+                  </p>
                 </div>
               </div>
 
@@ -231,7 +257,9 @@ export default function CIPage() {
                 <div className="space-y-1">
                   <h4 className="text-base font-extrabold text-[#0B2D52]">Teal Blue</h4>
                   <p className="text-xs text-slate-500 font-sans font-bold">Progress · Possibility · Tomorrow</p>
-                  <p className="text-xs text-slate-600 pt-1">미래, 혁신, 가능성, 지속 가능한 성장</p>
+                  <p className="text-xs text-slate-600 pt-1">
+                    {isEng ? "Future, Innovation, Sustainable Growth" : "미래, 혁신, 가능성, 지속 가능한 성장"}
+                  </p>
                 </div>
               </div>
 
@@ -243,7 +271,9 @@ export default function CIPage() {
                 <div className="space-y-1">
                   <h4 className="text-base font-extrabold text-[#0B2D52]">White / Light Background</h4>
                   <p className="text-xs text-slate-500 font-sans font-bold">Transparency · Objectivity</p>
-                  <p className="text-xs text-slate-600 pt-1">투명성, 명료함, 객관성, 공공적 가치</p>
+                  <p className="text-xs text-slate-600 pt-1">
+                    {isEng ? "Transparency, Clarity, Objectivity" : "투명성, 명료함, 객관성, 공공적 가치"}
+                  </p>
                 </div>
               </div>
             </div>

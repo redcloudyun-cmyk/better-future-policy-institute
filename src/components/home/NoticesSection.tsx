@@ -39,7 +39,7 @@ export default function NoticesSection() {
               정기주주총회 소집공고 및 재무제표 공고
             </h3>
             <p className="text-xs text-slate-600 leading-relaxed max-w-3xl">
-              주식회사 더좋은미래정책연구원 정기주주총회 개최(일시: 2026년 9월 30일 오전 10시, 본점 회의실) 및 제1기 재무제표 승인의 건 공시문입니다.
+              주식회사 미래정책연구원 정기주주총회 개최(일시: 2026년 9월 30일 오전 10시, 본점 회의실) 및 제1기 재무제표 승인의 건 공시문입니다.
             </p>
           </div>
 

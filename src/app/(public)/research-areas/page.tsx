@@ -305,8 +305,8 @@ export default function ResearchAreasPage() {
           </p>
           <p className="text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal pt-2">
             {isEng
-              ? "Better Future Policy Institute analyzes social changes and policy demands to design evidence-based solutions across regional development, education, welfare, labor, industry, environment, governance, digital AI, and social cohesion."
-              : "더좋은미래정책연구원은 사회 변화와 정책수요를 분석하고, 현장과 데이터에 기반한 정책대안을 연구합니다. 지역발전, 교육, 복지, 고용, 산업, 환경, 행정, 디지털 전환, 사회통합 등 공공정책 전반의 주요 과제를 폭넓게 다룹니다."}
+              ? "Future Policy Institute analyzes social changes and policy demands to design evidence-based solutions across regional development, education, welfare, labor, industry, environment, governance, digital AI, and social cohesion."
+              : "미래정책연구원은 사회 변화와 정책수요를 분석하고, 현장과 데이터에 기반한 정책대안을 연구합니다. 지역발전, 교육, 복지, 고용, 산업, 환경, 행정, 디지털 전환, 사회통합 등 공공정책 전반의 주요 과제를 폭넓게 다룹니다."}
           </p>
         </div>
       </div>
@@ -413,8 +413,8 @@ export default function ResearchAreasPage() {
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
               {isEng
-                ? "Better Future Policy Institute combines regional development, education, welfare, industry, environment, and data analytics to address complex multifaceted social challenges."
-                : "더좋은미래정책연구원은 지역, 교육, 복지, 산업, 환경, 데이터 등 다양한 영역을 결합하여 복합적인 사회문제에 대응합니다."}
+                ? "Future Policy Institute combines regional development, education, welfare, industry, environment, and data analytics to address complex multifaceted social challenges."
+                : "미래정책연구원은 지역, 교육, 복지, 산업, 환경, 데이터 등 다양한 영역을 결합하여 복합적인 사회문제에 대응합니다."}
             </p>
           </div>
 

@@ -4,7 +4,7 @@ import { prisma } from "@/lib/db";
 import { Search, Building, Calendar, ArrowUpRight, Filter } from "lucide-react";
 
 export const metadata = {
-  title: "연구성과 | 주식회사 더좋은미래정책연구원",
+  title: "연구성과 | 주식회사 미래정책연구원",
   description: "중앙정부, 지자체, 공공기관 위탁 연구성과 사례 및 정책보고서 아카이브",
 };
 

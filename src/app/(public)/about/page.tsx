@@ -62,7 +62,7 @@ export default function AboutPage() {
               ABOUT BFPI
             </span>
             <span className="text-xs font-bold text-slate-300 font-sans tracking-wider bg-white/10 px-3.5 py-1 rounded-full border border-white/10">
-              Better Future Policy Institute · Since 2026
+              Future Policy Institute · Since 2026
             </span>
           </div>
 
@@ -92,7 +92,7 @@ export default function AboutPage() {
             </div>
             <div className="text-left sm:text-right">
               <span className="text-xs font-bold text-slate-400 font-sans">
-                Better Future Policy Institute
+                Future Policy Institute
               </span>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
               <div className="pt-6 border-t border-white/10 space-y-2 text-xs text-slate-200 font-medium">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-teal-300 shrink-0" />
-                  <span>Better Future Policy Institute Co., Ltd.</span>
+                  <span>Future Policy Institute Co., Ltd.</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-teal-300 shrink-0" />
@@ -144,10 +144,10 @@ export default function AboutPage() {
                   <>
                     <p className="font-semibold text-slate-900">
                       Welcome.<br />
-                      I am Dr. Hye-ja Lim, Representative Researcher of Better Future Policy Institute Co., Ltd.
+                      I am Dr. Hye-ja Lim, Representative Researcher of Future Policy Institute Co., Ltd.
                     </p>
                     <p>
-                      Established in 2026, Better Future Policy Institute is a specialized policy research organization dedicated to analyzing complex public and private social challenges based on rigorous research and empirical data, offering actionable solutions.
+                      Established in 2026, Future Policy Institute is a specialized policy research organization dedicated to analyzing complex public and private social challenges based on rigorous research and empirical data, offering actionable solutions.
                     </p>
                     <p>
                       In today&apos;s rapidly transforming social structures and technological environments, policy design requires precision analysis and deep field understanding. Our institute integrally conducts policy research, surveys and analysis, evaluation and consulting, and data-driven insights.
@@ -164,10 +164,10 @@ export default function AboutPage() {
                   <>
                     <p className="font-semibold text-slate-900">
                       안녕하십니까.<br />
-                      주식회사 더좋은미래정책연구원 대표연구원 임혜자입니다.
+                      주식회사 미래정책연구원 대표연구원 임혜자입니다.
                     </p>
                     <p>
-                      더좋은미래정책연구원은 2026년에 설립된 정책연구 전문기관으로, 공공과 민간이 직면한 다양한 사회문제를 연구와 데이터에 기반하여 분석하고 실행 가능한 대안을 제시하는 것을 목표로 하고 있습니다.
+                      미래정책연구원은 2026년에 설립된 정책연구 전문기관으로, 공공과 민간이 직면한 다양한 사회문제를 연구와 데이터에 기반하여 분석하고 실행 가능한 대안을 제시하는 것을 목표로 하고 있습니다.
                     </p>
                     <p>
                       급변하는 사회구조와 기술환경 속에서 정책은 보다 정교한 분석과 현장에 대한 깊은 이해를 요구하고 있습니다. 저희 연구원은 정책연구, 조사·분석, 평가·컨설팅, 데이터 기반 인사이트를 통해 현실적인 정책 대안을 설계하고자 합니다.
@@ -185,7 +185,7 @@ export default function AboutPage() {
                 <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-600 font-medium">
                   <div>
                     <span className="font-bold text-[#0B2D52]">
-                      {isEng ? "Better Future Policy Institute Co., Ltd." : "주식회사 더좋은미래정책연구원"}
+                      {isEng ? "Future Policy Institute Co., Ltd." : "주식회사 미래정책연구원"}
                     </span>
                   </div>
                   <div className="text-[#0B2D52] font-bold">
@@ -208,8 +208,8 @@ export default function AboutPage() {
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-2">
               {isEng
-                ? "Better Future Policy Institute is a specialized policy research organization offering practical solutions through policy research, surveys & analytics, evaluation & consulting, and data-driven insights."
-                : "더좋은미래정책연구원은 정책연구, 조사·분석, 평가·컨설팅, 데이터 기반 인사이트를 통해 공공과 민간의 다양한 문제에 실질적인 해법을 제시하는 정책연구 전문기관입니다."}
+                ? "Future Policy Institute is a specialized policy research organization offering practical solutions through policy research, surveys & analytics, evaluation & consulting, and data-driven insights."
+                : "미래정책연구원은 정책연구, 조사·분석, 평가·컨설팅, 데이터 기반 인사이트를 통해 공공과 민간의 다양한 문제에 실질적인 해법을 제시하는 정책연구 전문기관입니다."}
             </p>
           </div>
 
@@ -224,12 +224,12 @@ export default function AboutPage() {
                 <div className="flex flex-col sm:flex-row sm:justify-between py-1 border-b border-slate-200/60 gap-0.5 sm:gap-0">
                   <dt className="text-slate-500 font-medium">{isEng ? "Organization Name" : "기관명"}</dt>
                   <dd className="font-bold text-[#0B2D52]">
-                    {isEng ? "Better Future Policy Institute Co., Ltd." : "주식회사 더좋은미래정책연구원"}
+                    {isEng ? "Future Policy Institute Co., Ltd." : "주식회사 미래정책연구원"}
                   </dd>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:justify-between py-1 border-b border-slate-200/60 gap-0.5 sm:gap-0">
                   <dt className="text-slate-500 font-medium">{isEng ? "English Name" : "영문명"}</dt>
-                  <dd className="font-bold text-[#0B2D52] font-sans">Better Future Policy Institute</dd>
+                  <dd className="font-bold text-[#0B2D52] font-sans">Future Policy Institute</dd>
                 </div>
                 <div className="flex justify-between py-1 border-b border-slate-200/60">
                   <dt className="text-slate-500 font-medium">{isEng ? "Established" : "설립"}</dt>
@@ -336,8 +336,8 @@ export default function AboutPage() {
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                 {isEng
-                  ? "Discover the brand identity and visual guidelines of Better Future Policy Institute representing trust, expertise, future-orientation, and public value."
-                  : "신뢰, 전문성, 미래지향성, 공공성을 시각적으로 담아낸 더좋은미래정책연구원의 브랜드 정체성 및 로고 가이드라인을 소개합니다."}
+                  ? "Discover the brand identity and visual guidelines of Future Policy Institute representing trust, expertise, future-orientation, and public value."
+                  : "신뢰, 전문성, 미래지향성, 공공성을 시각적으로 담아낸 미래정책연구원의 브랜드 정체성 및 로고 가이드라인을 소개합니다."}
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100">
@@ -365,8 +365,8 @@ export default function AboutPage() {
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                 {isEng
-                  ? "Directions and meeting guidance for visiting Better Future Policy Institute located in Hyowon-dong, Suwon-si, Gyeonggi-do."
-                  : "경기도 수원시 팔달구 효원동에 위치한 더좋은미래정책연구원으로 오시는 길 및 연구 협의 방문 일정을 안내합니다."}
+                  ? "Directions and meeting guidance for visiting Future Policy Institute located in Hyowon-dong, Suwon-si, Gyeonggi-do."
+                  : "경기도 수원시 팔달구 효원동에 위치한 미래정책연구원으로 오시는 길 및 연구 협의 방문 일정을 안내합니다."}
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100">

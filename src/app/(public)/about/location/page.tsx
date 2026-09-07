@@ -22,8 +22,8 @@ export default function LocationPage() {
           </h1>
           <p className="text-sm text-slate-300 max-w-2xl mx-auto">
             {isEng
-              ? "Guiding your path to Better Future Policy Institute."
-              : "더좋은미래정책연구원으로 오시는 길을 안내합니다."}
+              ? "Guiding your path to Future Policy Institute."
+              : "미래정책연구원으로 오시는 길을 안내합니다."}
           </p>
         </div>
       </div>
@@ -46,12 +46,12 @@ export default function LocationPage() {
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0B2D52]">
               {isEng
                 ? "Location & Contact Information"
-                : "더좋은미래정책연구원으로 오시는 길을 안내합니다."}
+                : "미래정책연구원으로 오시는 길을 안내합니다."}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-1">
               {isEng
-                ? "Better Future Policy Institute is located in Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do. If you require research consultation or visiting meetings, please coordinate schedule in advance."
-                : "더좋은미래정책연구원은 경기도 수원시 팔달구 효원동에 위치하고 있습니다. 연구 협의, 연구용역 상담 및 방문 미팅이 필요한 경우 사전에 일정을 협의해 주시기 바랍니다."}
+                ? "Future Policy Institute is located in Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do. If you require research consultation or visiting meetings, please coordinate schedule in advance."
+                : "미래정책연구원은 경기도 수원시 팔달구 효원동에 위치하고 있습니다. 연구 협의, 연구용역 상담 및 방문 미팅이 필요한 경우 사전에 일정을 협의해 주시기 바랍니다."}
             </p>
           </div>
 
@@ -63,9 +63,9 @@ export default function LocationPage() {
                 <span>{isEng ? "Organization" : "기관명"}</span>
               </div>
               <p className="font-extrabold text-[#0B2D52]">
-                {isEng ? "Better Future Policy Institute Co., Ltd." : "주식회사 더좋은미래정책연구원"}
+                {isEng ? "Future Policy Institute Co., Ltd." : "주식회사 미래정책연구원"}
               </p>
-              <p className="text-[11px] text-slate-400 font-sans">Better Future Policy Institute</p>
+              <p className="text-[11px] text-slate-400 font-sans">Future Policy Institute</p>
             </div>
 
             <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
@@ -135,12 +135,12 @@ export default function LocationPage() {
 
               <div className="space-y-1 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-slate-200 max-w-sm mx-auto">
                 <h4 className="text-lg font-black text-[#0B2D52]">
-                  {isEng ? "Better Future Policy Institute" : "더좋은미래정책연구원"}
+                  {isEng ? "Future Policy Institute" : "미래정책연구원"}
                 </h4>
                 <p className="text-xs font-extrabold text-teal-700">
                   {isEng ? "Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do, Korea" : "경기도 수원시 팔달구 효원동"}
                 </p>
-                <p className="text-[11px] text-slate-500 font-sans">Better Future Policy Institute · Since 2026</p>
+                <p className="text-[11px] text-slate-500 font-sans">Future Policy Institute · Since 2026</p>
               </div>
             </div>
           </div>
@@ -148,8 +148,8 @@ export default function LocationPage() {
           {/* Map Footer Notation */}
           <div className="p-4 bg-slate-50 text-center text-xs text-slate-500 border-t border-slate-100 font-medium">
             {isEng
-              ? "Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do, Korea · Better Future Policy Institute · Since 2026"
-              : "경기도 수원시 팔달구 효원동 · Better Future Policy Institute · Since 2026"}
+              ? "Hyowon-dong, Paldal-gu, Suwon-si, Gyeonggi-do, Korea · Future Policy Institute · Since 2026"
+              : "경기도 수원시 팔달구 효원동 · Future Policy Institute · Since 2026"}
           </div>
         </div>
       </div>

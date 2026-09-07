@@ -24,8 +24,8 @@ export default function CIPage() {
           </h1>
           <p className="text-sm text-slate-300 max-w-2xl mx-auto">
             {isEng
-              ? "The visual brand identity of Better Future Policy Institute heading towards a better future through research and policy."
-              : "연구와 정책으로 더 좋은 미래를 향하는 더좋은미래정책연구원의 시각적 정체성입니다."}
+              ? "The visual brand identity of Future Policy Institute heading towards a better future through research and policy."
+              : "연구와 정책으로 더 좋은 미래를 향하는 미래정책연구원의 시각적 정체성입니다."}
           </p>
         </div>
       </div>
@@ -52,8 +52,8 @@ export default function CIPage() {
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal pt-2">
               {isEng
-                ? "The CI of Better Future Policy Institute visually expresses our core values: Trust, Expertise, Future-Orientation, and Public Value."
-                : "더좋은미래정책연구원의 CI는 연구원의 핵심 가치인 신뢰, 전문성, 미래지향성, 공공성을 시각적으로 표현합니다."}
+                ? "The CI of Future Policy Institute visually expresses our core values: Trust, Expertise, Future-Orientation, and Public Value."
+                : "미래정책연구원의 CI는 연구원의 핵심 가치인 신뢰, 전문성, 미래지향성, 공공성을 시각적으로 표현합니다."}
             </p>
           </div>
 
@@ -130,14 +130,14 @@ export default function CIPage() {
             {/* eslint-disable-next-html-loader */}
             <img
               src="/images/ci-logo-proposal.png"
-              alt="Better Future Policy Institute CI Logo Guidelines"
+              alt="Future Policy Institute CI Logo Guidelines"
               className="w-full h-auto object-contain block max-h-[600px] mx-auto"
             />
           </div>
           <p className="text-xs text-slate-500 text-center font-medium">
             {isEng
               ? "* Official CI Symbol (Forward Future Path), Logotypes, and Color System Specifications"
-              : "* 더좋은미래정책연구원의 브랜드 심볼(Forward Future Path), 한글/영문 로고타입 및 핵심 컬러 시스템 가이드"}
+              : "* 미래정책연구원의 브랜드 심볼(Forward Future Path), 한글/영문 로고타입 및 핵심 컬러 시스템 가이드"}
           </p>
         </div>
 
@@ -213,7 +213,7 @@ export default function CIPage() {
               <BFPILogo variant="light" size="lg" showEnglish={true} showCorpName={true} />
               <div className="text-right space-y-1">
                 <div className="text-xs font-bold text-teal-300 font-sans tracking-wider">
-                  Better Future Policy Institute
+                  Future Policy Institute
                 </div>
                 <div className="text-sm font-extrabold text-white font-sans">
                   Since 2026

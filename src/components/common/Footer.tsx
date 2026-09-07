@@ -46,8 +46,8 @@ export default function Footer() {
           <div className="space-y-1">
             <p className="font-bold text-[#0B2D52]">
               {lang === "KR"
-                ? "주식회사 더좋은미래정책연구원 · Better Future Policy Institute · Since 2026"
-                : "Better Future Policy Institute Co., Ltd. · Since 2026"}
+                ? "주식회사 미래정책연구원 · Future Policy Institute · Since 2026"
+                : "Future Policy Institute Co., Ltd. · Since 2026"}
             </p>
             <p className="leading-relaxed">
               {lang === "KR"
@@ -82,8 +82,8 @@ export default function Footer() {
 
             <span>
               {lang === "KR"
-                ? "© 2026 더좋은미래정책연구원. All rights reserved."
-                : "© 2026 Better Future Policy Institute. All rights reserved."}
+                ? "© 2026 미래정책연구원. All rights reserved."
+                : "© 2026 Future Policy Institute. All rights reserved."}
             </span>
 
             <button

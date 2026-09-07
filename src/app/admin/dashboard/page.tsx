@@ -7,7 +7,7 @@ import BFPILogo from "@/components/common/BFPILogo";
 import { FileText, Inbox, Users, FolderCheck, LogOut, CheckCircle2, Clock } from "lucide-react";
 
 export const metadata = {
-  title: "관리자 대시보드 | 주식회사 더좋은미래정책연구원 CMS",
+  title: "관리자 대시보드 | 주식회사 미래정책연구원 CMS",
 };
 
 export default async function AdminDashboardPage() {

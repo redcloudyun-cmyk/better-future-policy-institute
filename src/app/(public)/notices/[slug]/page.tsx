@@ -4,7 +4,7 @@ import BFPILogo from "@/components/common/BFPILogo";
 import { ArrowLeft, Calendar, MapPin, FileText, BarChart2, Info, Download, ShieldCheck } from "lucide-react";
 
 export const metadata = {
-  title: "정기주주총회 소집공고 및 재무제표 공고 | 주식회사 더좋은미래정책연구원",
+  title: "정기주주총회 소집공고 및 재무제표 공고 | 주식회사 미래정책연구원",
   description: "2026년 정기주주총회 개최 소집공고 및 제1기 재무제표 승인의 건 공식 발표",
 };
 
@@ -55,7 +55,7 @@ export default function NoticeDetailPage({ params }: { params: { slug: string } 
                 <span className="text-[#0B2D52]">재무제표 공고</span>
               </h1>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl font-normal pt-1">
-                주식회사 더좋은미래정책연구원은 주주 여러분의 깊은 관심과 성원에 감사드리며, 아래와 같이 정기주주총회를 개최하고, 제1기 재무제표를 공고합니다.
+                주식회사 미래정책연구원은 주주 여러분의 깊은 관심과 성원에 감사드리며, 아래와 같이 정기주주총회를 개최하고, 제1기 재무제표를 공고합니다.
               </p>
             </div>
           </div>
@@ -196,7 +196,7 @@ export default function NoticeDetailPage({ params }: { params: { slug: string } 
           <div className="pt-8 border-t border-slate-200 text-center space-y-3">
             <div className="text-sm font-bold text-slate-500 font-sans">2026년 9월 6일</div>
             <div className="text-2xl font-black text-[#0B2D52]">
-              주식회사 더좋은미래정책연구원
+              주식회사 미래정책연구원
             </div>
             <div className="text-lg font-extrabold text-slate-800">
               대표이사 임혜자

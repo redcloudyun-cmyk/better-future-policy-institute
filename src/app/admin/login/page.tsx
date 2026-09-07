@@ -45,7 +45,7 @@ export default function AdminLoginPage() {
           <BFPILogo size="lg" showCorpName={true} />
           <div className="pt-2">
             <h1 className="text-xl font-bold text-[#0B2D52]">관리자 CMS 시스템</h1>
-            <p className="text-xs text-slate-500">더좋은미래정책연구원 통합 콘텐츠 및 문의관리</p>
+            <p className="text-xs text-slate-500">미래정책연구원 통합 콘텐츠 및 문의관리</p>
           </div>
         </div>
 

@@ -7,7 +7,7 @@ import BFPILogo from "@/components/common/BFPILogo";
 import { Inbox, FileText, Download, ArrowLeft, Mail, Phone, Calendar } from "lucide-react";
 
 export const metadata = {
-  title: "연구의뢰 문의 관리 | 주식회사 더좋은미래정책연구원 CMS",
+  title: "연구의뢰 문의 관리 | 주식회사 미래정책연구원 CMS",
 };
 
 export default async function AdminInquiriesPage() {

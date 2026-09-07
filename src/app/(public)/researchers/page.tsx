@@ -110,7 +110,7 @@ export default function ResearchersPage() {
                     <p className="text-xs font-bold text-slate-500 font-sans">{r.department}</p>
                     <div className="pt-1 flex items-center gap-1 text-[11px] text-slate-400 font-medium">
                       <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
-                      <span>{isEng ? "Better Future Policy Institute Co., Ltd." : "주식회사 더좋은미래정책연구원"}</span>
+                      <span>{isEng ? "Future Policy Institute Co., Ltd." : "주식회사 미래정책연구원"}</span>
                     </div>
                   </div>
                 </div>

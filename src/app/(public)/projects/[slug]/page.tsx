@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps) {
   if (!project) return { title: "프로젝트를 찾을 수 없습니다." };
 
   return {
-    title: `${project.title} | 주식회사 더좋은미래정책연구원`,
+    title: `${project.title} | 주식회사 미래정책연구원`,
     description: project.summary || project.title,
   };
 }

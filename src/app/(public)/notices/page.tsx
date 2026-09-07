@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Megaphone, Calendar, ChevronRight, FileText, Download, ShieldCheck } from "lucide-react";
 
 export const metadata = {
-  title: "공시 및 공지사항 | 주식회사 더좋은미래정책연구원",
+  title: "공시 및 공지사항 | 주식회사 미래정책연구원",
   description: "주주총회 소집공고, 재무제표 공고, 주요 연구원 소식 및 공식 공시 게시판",
 };
 
@@ -16,12 +16,12 @@ const notices = [
     isImportant: true,
     date: "2026.09.06",
     author: "경영지원팀",
-    summary: "주식회사 더좋은미래정책연구원 제1기 정기주주총회 개최 소집공고 및 재무제표 공시 안내입니다.",
+    summary: "주식회사 미래정책연구원 제1기 정기주주총회 개최 소집공고 및 재무제표 공시 안내입니다.",
   },
   {
     id: "bfpi-launch-2024",
     slug: "bfpi-launch-2024",
-    title: "주식회사 더좋은미래정책연구원 수원의 본점 공식 개원 안내",
+    title: "주식회사 미래정책연구원 수원의 본점 공식 개원 안내",
     category: "연구원소식",
     isImportant: false,
     date: "2026.08.15",
@@ -41,7 +41,7 @@ export default function NoticesPage() {
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white">공시 및 공지사항</h1>
           <p className="text-base text-slate-300 max-w-2xl mx-auto">
-            주식회사 더좋은미래정책연구원의 주주총회 소집공고, 재무제표 공시 및 주요 연구원 소식을 안내합니다.
+            주식회사 미래정책연구원의 주주총회 소집공고, 재무제표 공시 및 주요 연구원 소식을 안내합니다.
           </p>
         </div>
       </div>

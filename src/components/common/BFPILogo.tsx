@@ -16,7 +16,7 @@ export function BFPISymbol({ className = "w-9 h-9" }: { className?: string }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      aria-label="더좋은미래정책연구원 심볼"
+      aria-label="미래정책연구원 심볼"
     >
       <defs>
         {/* Navy Gradient for left path */}
@@ -103,7 +103,7 @@ export default function BFPILogo({
           </span>
         )}
         <span className={`font-bold tracking-tight ${titleSizes[size]} ${isLight ? "text-white" : "text-[#0B2D52]"}`}>
-          더좋은미래정책연구원
+          미래정책연구원
         </span>
 
         {showEnglish && (
@@ -112,7 +112,7 @@ export default function BFPILogo({
               isLight ? "text-teal-300 opacity-90" : "text-teal-600"
             }`}
           >
-            Better Future Policy Institute
+            Future Policy Institute
           </span>
         )}
       </div>

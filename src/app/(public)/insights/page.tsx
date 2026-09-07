@@ -4,7 +4,7 @@ import { prisma } from "@/lib/db";
 import { User, Calendar, Tag, ArrowUpRight } from "lucide-react";
 
 export const metadata = {
-  title: "데이터·인사이트 | 주식회사 더좋은미래정책연구원",
+  title: "데이터·인사이트 | 주식회사 미래정책연구원",
   description: "Policy Brief, Data Insight, Issue Report 정책 이슈 및 데이터 아카이브",
 };
 

@@ -80,7 +80,7 @@ export default function HeroSection() {
 
           {/* Sub-text */}
           <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal max-w-xl">
-            <strong className="text-[#0B2D52] font-bold">주식회사 더좋은미래정책연구원</strong>은 사람과 사회, 그리고 더 나은 미래를 위한 정책의 길을 함께 만듭니다. 공공과 민간의 다양한 파트너와 함께, 근거 있는 연구로 실질적인 변화를 이끌어갑니다.
+            <strong className="text-[#0B2D52] font-bold">주식회사 미래정책연구원</strong>은 사람과 사회, 그리고 더 나은 미래를 위한 정책의 길을 함께 만듭니다. 공공과 민간의 다양한 파트너와 함께, 근거 있는 연구로 실질적인 변화를 이끌어갑니다.
           </p>
 
           {/* Action Buttons */}
@@ -97,7 +97,7 @@ export default function HeroSection() {
               href="/about"
               className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-bold text-[#0B2D52] bg-white/90 hover:bg-white border border-slate-300 rounded-xl shadow-sm hover:shadow transition-all"
             >
-              <span>더좋은미래정책연구원 소개</span>
+              <span>미래정책연구원 소개</span>
               <ArrowRight className="w-4 h-4 text-slate-400" />
             </Link>
           </div>

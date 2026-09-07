@@ -19,8 +19,8 @@ export default function Footer() {
 
           {/* Sub-menu Quick Links */}
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-slate-700 font-bold">
-            <Link href="/about/greeting" className="hover:text-[#0B2D52] transition-colors">
-              원장 인사말
+            <Link href="/about" className="hover:text-[#0B2D52] transition-colors">
+              연구원 소개
             </Link>
             <Link href="/about/ci" className="hover:text-[#0B2D52] transition-colors">
               CI 소개

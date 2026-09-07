@@ -17,8 +17,7 @@ const navItems: NavItem[] = [
     label: "연구원 소개",
     href: "/about",
     subItems: [
-      { label: "소개 홈", href: "/about" },
-      { label: "원장 인사말", href: "/about/greeting" },
+      { label: "연구원 소개", href: "/about" },
       { label: "CI 소개", href: "/about/ci" },
       { label: "오시는 길", href: "/about/location" },
     ],
@@ -27,7 +26,13 @@ const navItems: NavItem[] = [
   { label: "연구용역", href: "/research-services" },
   { label: "성과사례", href: "/projects" },
   { label: "소식·공고", href: "/notices" },
-  { label: "연구진", href: "/researchers" },
+  {
+    label: "연구진",
+    href: "/researchers",
+    subItems: [
+      { label: "주요 연구진 소개", href: "/researchers" },
+    ],
+  },
   { label: "문의하기", href: "/inquiry" },
 ];
 

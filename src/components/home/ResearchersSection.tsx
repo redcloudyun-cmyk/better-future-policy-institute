@@ -1,43 +1,39 @@
 import React from "react";
 import Link from "next/link";
-import { User, Award, GraduationCap, ArrowRight } from "lucide-react";
+import { Award, ArrowRight, ShieldCheck } from "lucide-react";
 
 const researchers = [
   {
-    name: "임혜자",
-    englishName: "Hye-ja Lim",
-    title: "대표이사 / 원장",
-    department: "연구기획실",
-    specialty: "공공정책 · 지역발전 · 국가거버넌스",
-    education: "서울대학교 행정대학원 행정학 박사",
-    career: "전) 대통령비서실 선임행정관",
+    name: "임혜자 박사",
+    englishName: "Dr. Im Hye-ja",
+    title: "대표연구원",
+    department: "연구총괄본부",
+    specialty: "정책기획 · 공공정책 · 연구총괄",
+    desc: "정책연구 전반을 총괄하며 연구원의 연구방향과 주요 프로젝트를 이끕니다.",
   },
   {
-    name: "김현우",
-    englishName: "Hyun-woo Kim",
-    title: "선임연구위원",
-    department: "지역정책연구실",
-    specialty: "지방소멸 대응 · 균형발전 · 도시계획",
-    education: "연세대학교 도시공학과 박사",
-    career: "전) 한국지방행정연구원 객원연구원",
+    name: "이세리 박사",
+    englishName: "Dr. Lee Se-ri",
+    title: "수석연구원",
+    department: "정책연구실",
+    specialty: "정책연구 · 조사분석 · 사회정책",
+    desc: "정책연구와 조사·분석을 중심으로 다양한 사회현안에 대한 연구를 수행합니다.",
   },
   {
-    name: "박서연",
-    englishName: "Seo-yeon Park",
-    title: "연구위원",
-    department: "데이터·조사연구실",
-    specialty: "통계분석 · 사회조사 · Big Data Analytics",
-    education: "고려대학교 통계학과 박사",
-    career: "전) 한국갤럽 수석연구원",
+    name: "이윤정 박사",
+    englishName: "Dr. Lee Yoon-jung",
+    title: "수석연구원",
+    department: "평가컨설팅실",
+    specialty: "사회정책 · 정책평가 · 공공컨설팅",
+    desc: "사회정책과 평가·컨설팅 분야를 중심으로 실효성 있는 정책대안을 연구합니다.",
   },
   {
-    name: "정민준",
-    englishName: "Min-jun Jung",
-    title: "연구위원",
-    department: "환경·에너지연구실",
-    specialty: "탄소중립 · ESG · 기후변화 정책",
-    education: "KAIST 녹색성장대학원 박사",
-    career: "현) 더좋은미래정책연구원 연구위원",
+    name: "홍길동 박사",
+    englishName: "Dr. Hong Gil-dong",
+    title: "수석연구원",
+    department: "데이터인사이트센터",
+    specialty: "데이터 분석 · 정책 인사이트 · 빅데이터",
+    desc: "데이터 분석과 정책 인사이트를 중심으로 근거 기반의 연구를 수행합니다.",
   },
 ];
 
@@ -51,10 +47,10 @@ export default function ResearchersSection() {
               EXPERT RESEARCHERS
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2D52]">
-              더좋은미래정책연구원 연구진
+              주요 연구진 소개
             </h2>
             <p className="mt-2 text-base text-slate-600">
-              학계, 중앙부처, 연구기관 출신의 분야별 최고 전문 연구 인력이 고품질 정책 해법을 탐구합니다.
+              다양한 분야의 전문성과 객관적 분석 역량을 갖춘 연구진이 더 나은 정책을 연구합니다.
             </p>
           </div>
           <Link
@@ -73,8 +69,7 @@ export default function ResearchersSection() {
               className="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
             >
               <div className="space-y-4">
-                {/* Avatar Placeholder / Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0B2D52] to-[#14B8A6] flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0B2D52] to-[#14B8A6] flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform font-sans">
                   {r.name[0]}
                 </div>
 
@@ -86,20 +81,21 @@ export default function ResearchersSection() {
                   <p className="text-xs text-slate-400 font-sans">{r.englishName}</p>
                 </div>
 
+                <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                  {r.desc}
+                </p>
+
                 <div className="space-y-2 pt-2 border-t border-slate-200/60 text-xs">
                   <div className="flex items-start gap-2 text-slate-700">
                     <Award className="w-4 h-4 text-teal-600 shrink-0 mt-0.5" />
                     <span className="font-semibold">{r.specialty}</span>
                   </div>
-                  <div className="flex items-start gap-2 text-slate-500">
-                    <GraduationCap className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
-                    <span>{r.education}</span>
-                  </div>
                 </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-slate-200/60 text-[11px] text-slate-500">
-                {r.career}
+              <div className="pt-4 mt-4 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-400">
+                <span>학력·경력 정보</span>
+                <span className="text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded">추후 업데이트</span>
               </div>
             </div>
           ))}

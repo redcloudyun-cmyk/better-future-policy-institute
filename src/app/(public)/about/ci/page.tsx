@@ -126,13 +126,115 @@ export default function CIPage() {
             </span>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-inner">
-            {/* eslint-disable-next-html-loader */}
-            <img
-              src="/images/ci-logo-proposal.png"
-              alt="Future Policy Institute CI Logo Guidelines"
-              className="w-full h-auto object-contain block max-h-[600px] mx-auto"
-            />
+          {/* Interactive Vector CI Specification Board */}
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-[#F8FAFC] p-6 sm:p-10 border-slate-200/80 shadow-inner space-y-8">
+            {/* Sheet Header */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-200 pb-5 gap-3">
+              <div className="space-y-1">
+                <span className="text-[10px] font-black text-slate-400 font-sans tracking-widest uppercase">
+                  LOGO PROPOSAL
+                </span>
+                <p className="text-xs sm:text-sm font-extrabold text-slate-700">
+                  {isEng ? "Policy path to the future, together." : "미래를 만드는 정책의 길, 함께."}
+                </p>
+              </div>
+              <div className="text-left sm:text-right text-[9px] sm:text-[10px] font-bold text-slate-400 font-sans tracking-widest uppercase leading-tight">
+                POLICY / RESEARCH / FOR A<br />
+                BETTER TOMORROW
+              </div>
+            </div>
+
+            {/* Sheet Main Showcase Grid */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+              {/* Left Column: Korean Main Logo & English Subtitle Logo */}
+              <div className="md:col-span-8 space-y-6">
+                {/* 01 Main Logo (Korean) */}
+                <div className="p-6 bg-slate-50/80 rounded-xl border border-slate-100 space-y-2">
+                  <span className="text-[10px] font-extrabold text-slate-400 font-sans tracking-wider block">
+                    01 MAIN LOGO (KOREAN)
+                  </span>
+                  <div className="pt-2 flex items-center gap-3">
+                    <BFPISymbol className="w-10 h-10 sm:w-14 sm:h-14 shrink-0" />
+                    <span className="text-2xl sm:text-4xl font-black text-[#0B2D52] tracking-tight">
+                      미래정책연구원
+                    </span>
+                  </div>
+                </div>
+
+                {/* 02 Logo with English Subtitle */}
+                <div className="p-6 bg-slate-50/80 rounded-xl border border-slate-100 space-y-2">
+                  <span className="text-[10px] font-extrabold text-slate-400 font-sans tracking-wider block">
+                    02 LOGO WITH ENGLISH SUBTITLE
+                  </span>
+                  <div className="pt-2 flex items-center gap-3">
+                    <BFPISymbol className="w-10 h-10 sm:w-14 sm:h-14 shrink-0" />
+                    <div className="flex flex-col justify-center leading-tight">
+                      <span className="text-xl sm:text-3xl font-black text-[#0B2D52] tracking-tight">
+                        미래정책연구원
+                      </span>
+                      <span className="text-xs sm:text-sm font-extrabold text-[#0F766E] font-sans tracking-wider pt-0.5">
+                        Future Policy Institute
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Icon Only */}
+              <div className="md:col-span-4 bg-slate-50/80 rounded-xl p-6 border border-slate-100 flex flex-col items-center justify-center text-center space-y-3 min-h-[160px]">
+                <BFPISymbol className="w-16 h-16 sm:w-20 sm:h-20" />
+                <span className="text-[10px] font-extrabold text-slate-400 font-sans tracking-wider">
+                  03 ICON ONLY
+                </span>
+              </div>
+            </div>
+
+            {/* Sheet Footer Specification Details */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-slate-200 text-xs">
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-extrabold text-teal-600 font-sans tracking-widest uppercase block">
+                  CONCEPT 1. FORWARD FUTURE PATH
+                </span>
+                <p className="text-slate-600 text-[11px] leading-relaxed font-normal">
+                  {isEng
+                    ? "An open path created by two planes symbolizes policy direction and continuous progress."
+                    : "두 개의 면이 앞을 향해 열리며 만들어지는 길은 미래를 향한 정책의 방향과 지속적인 발전을 상징합니다."}
+                </p>
+              </div>
+
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-extrabold text-teal-600 font-sans tracking-widest uppercase block">
+                  KEY VALUES
+                </span>
+                <div className="grid grid-cols-3 gap-1.5 text-[10px] text-center font-bold">
+                  <div className="p-2 bg-white rounded-lg border border-slate-200 text-[#0B2D52]">
+                    {isEng ? "Future" : "미래지향"}
+                  </div>
+                  <div className="p-2 bg-white rounded-lg border border-slate-200 text-[#0B2D52]">
+                    {isEng ? "Evidence" : "근거정책"}
+                  </div>
+                  <div className="p-2 bg-white rounded-lg border border-slate-200 text-[#0B2D52]">
+                    {isEng ? "Progress" : "함께변화"}
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-extrabold text-teal-600 font-sans tracking-widest uppercase block">
+                  COLOR PALETTE
+                </span>
+                <div className="flex items-center gap-4 pt-1">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-4 h-4 rounded-full bg-[#0B2D52] shadow-sm border border-slate-300" />
+                    <span className="text-[11px] font-bold text-slate-700 font-sans">Deep Navy</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-4 h-4 rounded-full bg-[#0F766E] shadow-sm border border-slate-300" />
+                    <span className="text-[11px] font-bold text-slate-700 font-sans">Teal Blue</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <p className="text-xs text-slate-500 text-center font-medium">
             {isEng

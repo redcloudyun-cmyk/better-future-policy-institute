@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
     ],
   },
   { label: { KR: "연구분야", ENG: "Research Areas" }, href: "/research-areas" },
-  { label: { KR: "연구용역", ENG: "Research Services" }, href: "/research-services" },
+  { label: { KR: "연구용역·서비스", ENG: "Research Services" }, href: "/research-services" },
   { label: { KR: "성과사례", ENG: "Projects" }, href: "/projects" },
   { label: { KR: "소식·공고", ENG: "Notices & News" }, href: "/notices" },
   {
